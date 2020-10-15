@@ -10,6 +10,11 @@
 		<UICulture>en-US</UICulture>
 	</PropertyGroup>
 
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+	  <DebugType>none</DebugType>
+	  <DebugSymbols>false</DebugSymbols>
+	</PropertyGroup>
+
 	<ItemGroup>
 		<PackageReference Include="tik4net" Version="3.5.0" />
 	</ItemGroup>
