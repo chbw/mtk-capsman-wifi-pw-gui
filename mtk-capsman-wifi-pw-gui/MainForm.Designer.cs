@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            this.lbSec = new System.Windows.Forms.ListBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.txtHost = new System.Windows.Forms.TextBox();
@@ -39,11 +40,23 @@
             this.chkKeep = new System.Windows.Forms.CheckBox();
             this.btnConnect = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnDisplayChangePassword = new System.Windows.Forms.Button();
-            this.lbSec = new System.Windows.Forms.ListBox();
+            this.btnAbout = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // lbSec
+            // 
+            this.lbSec.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbSec.FormattingEnabled = true;
+            this.lbSec.Location = new System.Drawing.Point(3, 38);
+            this.lbSec.Name = "lbSec";
+            this.lbSec.Size = new System.Drawing.Size(596, 123);
+            this.lbSec.TabIndex = 5;
+            this.lbSec.DoubleClick += new System.EventHandler(this.btnDisplayChangePassword_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -78,7 +91,7 @@
             this.txtHost.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
             this.txtHost.Name = "txtHost";
             this.txtHost.Size = new System.Drawing.Size(100, 20);
-            this.txtHost.TabIndex = 2;
+            this.txtHost.TabIndex = 0;
             // 
             // label2
             // 
@@ -96,7 +109,7 @@
             this.txtUser.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(100, 20);
-            this.txtUser.TabIndex = 6;
+            this.txtUser.TabIndex = 1;
             // 
             // label3
             // 
@@ -114,7 +127,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(100, 20);
-            this.txtPassword.TabIndex = 7;
+            this.txtPassword.TabIndex = 2;
             // 
             // chkKeep
             // 
@@ -123,7 +136,7 @@
             this.chkKeep.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
             this.chkKeep.Name = "chkKeep";
             this.chkKeep.Size = new System.Drawing.Size(51, 17);
-            this.chkKeep.TabIndex = 8;
+            this.chkKeep.TabIndex = 3;
             this.chkKeep.Text = "Save";
             this.chkKeep.UseVisualStyleBackColor = true;
             // 
@@ -135,8 +148,8 @@
             this.btnConnect.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.btnConnect.Name = "btnConnect";
             this.btnConnect.Size = new System.Drawing.Size(57, 23);
-            this.btnConnect.TabIndex = 0;
-            this.btnConnect.Text = "Connect";
+            this.btnConnect.TabIndex = 4;
+            this.btnConnect.Text = "C&onnect";
             this.btnConnect.UseVisualStyleBackColor = true;
             this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
             // 
@@ -145,60 +158,79 @@
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnDisplayChangePassword, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.lbSec, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 122F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(602, 199);
             this.tableLayoutPanel1.TabIndex = 1;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.AutoSize = true;
+            this.tableLayoutPanel2.ColumnCount = 3;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel2.Controls.Add(this.btnDisplayChangePassword, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnAbout, 2, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 167);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(596, 29);
+            this.tableLayoutPanel2.TabIndex = 11;
             // 
             // btnDisplayChangePassword
             // 
-            this.btnDisplayChangePassword.AutoSize = true;
             this.btnDisplayChangePassword.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnDisplayChangePassword.Location = new System.Drawing.Point(3, 140);
+            this.btnDisplayChangePassword.Enabled = false;
+            this.btnDisplayChangePassword.Location = new System.Drawing.Point(3, 3);
             this.btnDisplayChangePassword.Name = "btnDisplayChangePassword";
             this.btnDisplayChangePassword.Size = new System.Drawing.Size(142, 23);
-            this.btnDisplayChangePassword.TabIndex = 1;
-            this.btnDisplayChangePassword.Text = "Display/Change Password";
+            this.btnDisplayChangePassword.TabIndex = 6;
+            this.btnDisplayChangePassword.Text = "&Display/Change Password";
             this.btnDisplayChangePassword.UseVisualStyleBackColor = true;
-            this.btnDisplayChangePassword.Click += new System.EventHandler(this.btnDisplayChangePassword_Click);
             // 
-            // lbSec
+            // btnAbout
             // 
-            this.lbSec.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbSec.FormattingEnabled = true;
-            this.lbSec.Location = new System.Drawing.Point(3, 38);
-            this.lbSec.Name = "lbSec";
-            this.lbSec.Size = new System.Drawing.Size(794, 96);
-            this.lbSec.TabIndex = 2;
+            this.btnAbout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAbout.Location = new System.Drawing.Point(518, 3);
+            this.btnAbout.Name = "btnAbout";
+            this.btnAbout.Size = new System.Drawing.Size(75, 23);
+            this.btnAbout.TabIndex = 7;
+            this.btnAbout.Text = "&About";
+            this.btnAbout.UseVisualStyleBackColor = true;
+            this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(602, 199);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.Text = "Password-Editor for MikroTik CAPsMAN";
+            this.Shown += new System.EventHandler(this.MainForm_Shown);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
+        private System.Windows.Forms.ListBox lbSec;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button btnConnect;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtHost;
         private System.Windows.Forms.Label label2;
@@ -206,9 +238,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.CheckBox chkKeep;
+        private System.Windows.Forms.Button btnConnect;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button btnDisplayChangePassword;
-        private System.Windows.Forms.ListBox lbSec;
+        private System.Windows.Forms.Button btnAbout;
     }
 }
 
